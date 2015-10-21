@@ -1,0 +1,24 @@
+{
+  "name": "simple-conf",
+  "version": "1.0.0",
+  "description": "Simple configuration for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/l-urence/simple-conf.git"
+  },
+  "keywords": [
+    "node",
+    "env",
+    "configuration"
+  ],
+  "author": "Laurence Bortfeld",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/l-urence/simple-conf/issues"
+  },
+  "homepage": "https://github.com/l-urence/simple-conf#readme"
+}
