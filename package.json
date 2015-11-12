@@ -1,11 +1,11 @@
 {
-  "name": "simple-conf",
-  "version": "1.0.0",
+  "name": "plain-conf",
+  "version": "0.0.1",
   "description": "Simple configuration for nodejs",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/l-urence/simple-conf.git"
+    "url": "git+ssh://git@github.com/l-urence/plain-conf.git"
   },
   "keywords": [
     "node",
@@ -15,7 +15,7 @@
   "author": "Laurence Bortfeld",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/l-urence/simple-conf/issues"
+    "url": "https://github.com/l-urence/plain-conf/issues"
   },
-  "homepage": "https://github.com/l-urence/simple-conf#readme"
+  "homepage": "https://github.com/l-urence/plain-conf#readme"
 }
