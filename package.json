@@ -1,6 +1,6 @@
 {
   "name": "plain-conf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple configuration for nodejs",
   "main": "index.js",
   "repository": {
