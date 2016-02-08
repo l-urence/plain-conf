@@ -10,11 +10,11 @@ const before = mocha.before;
 const expect = chai.expect;
 
 function clearRequireCache() {
-    delete require.cache[require.resolve('../')] ;
+  delete require.cache[require.resolve('../')];
 }
 
 describe('check no NODE_ENV set', function() {
-  it('isDebug musst be true in no environment', function(){
+  it('isDebug musst be true in no environment', function() {
     const debug = require('../').isDebug;
     expect(debug).to.equal(true);
   });
