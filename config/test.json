@@ -1,0 +1,12 @@
+{
+  "StarWars": {
+    "planets": [
+      "Coruscant",
+      "Hoth",
+      "Jakku",
+      "Naboo",
+      "Serenno",
+      "Tatooine"
+    ]
+  }
+}
