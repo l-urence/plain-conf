@@ -58,7 +58,7 @@ describe('Check production mode NODE_ENV === "production"', function() {
     function() {
       const debug = require('../').isDebug;
       const __DEV__ = require('../').__DEV__;
-      expect(! (debug && __DEV__)).to.equal(false);
+      expect(debug || __DEV__).to.equal(false);
     }
   );
 
