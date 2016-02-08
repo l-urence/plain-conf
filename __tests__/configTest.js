@@ -14,9 +14,10 @@ function clearRequireCache() {
 }
 
 describe('check no NODE_ENV set', function() {
-  it('isDebug musst be true in no environment', function() {
+  it('isDebug and __DEV__ musst be true in no environment', function() {
     const debug = require('../').isDebug;
-    expect(debug).to.equal(true);
+    const __DEV__ = require('../').__DEV__;
+    expect(debug && __DEV__).to.equal(true);
   });
 
   it('Configuration should be the development config file', function() {
@@ -34,9 +35,10 @@ describe('Check development mode NODE_ENV !== "production"', function() {
 
   after(clearRequireCache);
 
-  it('isDebug musst be true in development environment', function() {
+  it('isDebug and __DEV__ musst be true in dev environment', function() {
     const debug = require('../').isDebug;
-    expect(debug).to.equal(true);
+    const __DEV__ = require('../').__DEV__;
+    expect(debug && __DEV__).to.equal(true);
   });
 
   it('Configuration should be the development config file', function() {
@@ -52,10 +54,13 @@ describe('Check production mode NODE_ENV === "production"', function() {
 
   after(clearRequireCache);
 
-  it('isDebug musst be false in production environment', function() {
-    const debug = require('../').isDebug;
-    expect(debug).to.equal(false);
-  });
+  it('isDebug and __DEV__ musst be false in production environment',
+    function() {
+      const debug = require('../').isDebug;
+      const __DEV__ = require('../').__DEV__;
+      expect(! (debug && __DEV__)).to.equal(false);
+    }
+  );
 
   it('Configuration should be the production config file', function() {
     const config = require('../').config;
@@ -70,9 +75,10 @@ describe('Check for NODE_ENV === "test"', function() {
 
   after(clearRequireCache);
 
-  it('isDebug musst be true in test environment', function() {
+  it('isDebug and __DEV__ musst be true in test environment', function() {
     const debug = require('../').isDebug;
-    expect(debug).to.equal(true);
+    const __DEV__ = require('../').__DEV__;
+    expect(debug && __DEV__).to.equal(true);
   });
 
   it('Configuration should be the test config file', function() {
