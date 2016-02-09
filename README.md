@@ -29,7 +29,7 @@ const debug = require('plain-conf').isDebug; // false
 const debug = require('plain-conf').isDebug; // true
 
 // Or use the __DEV__ alias.
-const __DEV__ from require('plain-conf').__DEV__;
+const __DEV__ = require('plain-conf').__DEV__;
 ```
 
 
