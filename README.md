@@ -17,8 +17,8 @@ Put all your configurations files (production.js, development.js, etc.) under th
 const config = require('plain-conf').config;
 ```
 
-## isDebug / __DEV__
-Check if your configuration environment should be debuggable. This will return `true` unless your `NODE_ENV=production`.
+## Check for debug / development environment 
+Check if your configuration environment should be debuggable. `isDebug` will return `true` unless `NODE_ENV=production`.
 
 ### Example:
 ```JavaScript
@@ -28,7 +28,7 @@ const debug = require('plain-conf').isDebug; // false
 // For NODE_ENV=development.
 const debug = require('plain-conf').isDebug; // true
 
-// Or use the __DEV__ alias for isDebug.
+// Or use the __DEV__ alias.
 const __DEV__ from require('plain-conf').__DEV__;
 ```
 
