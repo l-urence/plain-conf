@@ -1,8 +1,8 @@
-const path = require('path');
+var path = require('path');
 
-const env = process.env.NODE_ENV;
-const configFile = env !== undefined ? env : 'development';
-const debug = env !== undefined ? env !== 'production' : true;
+var env = process.env.NODE_ENV;
+var configFile = env !== undefined ? env : 'development';
+var debug = env !== undefined ? env !== 'production' : true;
 
 module.exports = {
   config: require(path.join(process.cwd(), './config/', configFile)),
