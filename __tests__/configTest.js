@@ -21,7 +21,7 @@ describe('check no NODE_ENV set', function() {
   });
 
   it('Configuration should be the development config file', function() {
-    var config = require('../').config;
+    var config = require('../');
     expect(config.StarWars.movies[0]).to.equal('Star Wars');
   });
 
@@ -42,7 +42,7 @@ describe('Check development mode NODE_ENV !== "production"', function() {
   });
 
   it('Configuration should be the development config file', function() {
-    var config = require('../').config;
+    var config = require('../');
     expect(config.StarWars.movies[6]).to.equal('The Force Awakens');
   });
 });
@@ -63,7 +63,7 @@ describe('Check production mode NODE_ENV === "production"', function() {
   );
 
   it('Configuration should be the production config file', function() {
-    var config = require('../').config;
+    var config = require('../');
     expect(config.StarWars.characters[0]).to.equal('Han Solo');
   });
 });
@@ -82,7 +82,19 @@ describe('Check for NODE_ENV === "test"', function() {
   });
 
   it('Configuration should be the test config file', function() {
-    var config = require('../').config;
+    var config = require('../');
     expect(config.StarWars.planets[2]).to.equal('Jakku');
+  });
+});
+
+describe('require(plain-conf).config', function() {
+  before(function() {
+    process.env.NODE_ENV = 'test';
+  });
+
+  after(clearRequireCache);
+
+  it('should be depreciated', function() {
+    var config = require('../').config;
   });
 });
