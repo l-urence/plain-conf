@@ -86,15 +86,3 @@ describe('Check for NODE_ENV === "test"', function() {
     expect(config.StarWars.planets[2]).to.equal('Jakku');
   });
 });
-
-describe('require(plain-conf).config', function() {
-  before(function() {
-    process.env.NODE_ENV = 'test';
-  });
-
-  after(clearRequireCache);
-
-  it('should be depreciated', function() {
-    var config = require('../').config;
-  });
-});
